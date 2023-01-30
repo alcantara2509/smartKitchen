@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --darkGray: #4e4e4e;
+  --mediumGray: #acacac;
+  --gray: #c7c7c7;
+  --lightGray: #d6d6d6;
+}
+
+.backgroundGray {
+  background-color: var(--gray);
+}
+
+.backgroundLight {
+  background-color: var(--lightGray);
+}
+
+.colorDarkGray {
+  color: var(--darkGray);
+}
+
+.colorMediumGray {
+  color: var(--mediumGray);
+}
+
+.colorGray {
+  color: var(--gray);
+}
+
+.colorLightGray {
+  color: var(--lightGray);
+}
+
+body::-webkit-scrollbar {
+  width: 7px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--darkGray);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(112, 112, 112);
+  border: none;
+  border-radius: 2px;
+}
+
+.pointer {
+  cursor: pointer;
+}

@@ -1,0 +1,9 @@
+.cardInfoContainer {
+  height: 130px;
+  width: 90px;
+  border-radius: 8px;
+}
+
+.selected {
+  background-color: var(--lightGray);
+}
