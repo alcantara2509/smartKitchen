@@ -1,0 +1,45 @@
+.wrapper {
+  position: absolute;
+  top: -680px;
+  left: -340px;
+  z-index: -1;
+}
+
+.redWheel {
+  height: 380px;
+  width: 380px;
+  background-image: linear-gradient(to right, rgb(0, 68, 255) , rgb(247, 87, 87));
+  border-radius: 100% 0 0 0;
+  transition: transform 1.5s;
+}
+
+.blueWheel {
+  height: 380px;
+  width: 380px;
+  background-image: linear-gradient(to right, rgb(39, 255, 201) , rgb(0, 68, 255));
+  border-radius: 100% 0 0 0;
+  transition: transform 1.5s;
+}
+
+.greenWheel {
+  height: 380px;
+  width: 380px;
+  background-color: rgb(0, 226, 177);
+  border-radius: 100% 0 0 0;
+  transition: transform 1.5s;
+}
+
+.yellowWheel {
+  height: 380px;
+  width: 380px;
+  background-color: rgb(255, 238, 0);
+  border-radius: 100% 0 0 0;
+  transition: transform 1.5s;
+}
+
+.insideWheel {
+  background-color: var(--gray);
+  height: 280px;
+  width: 280px;
+  border-radius: 100% 0 0 0;
+}

@@ -1,6 +1,6 @@
 'use client';
 
-import { memo, useState } from 'react';
+import { memo } from 'react';
 import './styles.css';
 import Image from 'next/image';
 import { KeyboardArrowLeft } from '@styled-icons/material-rounded/KeyboardArrowLeft';
@@ -8,14 +8,19 @@ import { KeyboardArrowRight } from '@styled-icons/material-rounded/KeyboardArrow
 import data from './mock';
 
 interface Params {
+  selected: number;
+  setSelected: Function;
+  angle: number;
+  setAngle: Function;
+}
+
+interface DataParams {
   src: string;
   alt: number;
   text: string;
 }
 
-function PlatesOptions() {
-  const [selected, setSelected] = useState(1);
-
+function PlatesOptions({ selected, setSelected, angle, setAngle } : Params) {
   const handleMinus = () => setSelected(selected === 1 ? 4 : selected - 1);
   const handlePlus = () => setSelected(selected === 4 ? 1 : selected + 1);
 
@@ -27,12 +32,15 @@ function PlatesOptions() {
         className="mr-10 pointer"
         onClick={handleMinus}
       />
-      { (data || []).map((item: Params) => (
+      { (data || []).map((item: DataParams) => (
         <button
           type="button"
           className={`cardInfoContainer p-3 mr-10 pointer ${item.alt === selected && "selected"}`}
           key={item.alt}
-          onClick={() => setSelected(item.alt)}
+          onClick={() => {
+            setSelected(item.alt);
+            setAngle(angle + 90);
+          }}
         >
           <Image
             src={item.src}
