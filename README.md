@@ -1,6 +1,7 @@
 ## New Next.Js 13 Project
 
 ![](https://github.com/alcantara2509/smartKitchen/blob/main/public/images/smart-kitchen.gif)
+Layout reference: https://br.pinterest.com/pin/94505292173339025/
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
