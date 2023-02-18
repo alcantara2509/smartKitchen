@@ -3,10 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --darkGray: #4e4e4e;
+  --darkGray: #3f3f3f;
   --mediumGray: #acacac;
   --gray: #c7c7c7;
   --lightGray: #d6d6d6;
+}
+
+.backgroundDarkGray {
+  background-color: var(--darkGray);
 }
 
 .backgroundGray {

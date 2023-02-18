@@ -1,0 +1,7 @@
+.homeWrapper {
+  width: 1366px;
+  height: 90vh;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}

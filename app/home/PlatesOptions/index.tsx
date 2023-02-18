@@ -21,11 +21,18 @@ interface DataParams {
 }
 
 function PlatesOptions({ selected, setSelected, angle, setAngle } : Params) {
-  const handleMinus = () => setSelected(selected === 1 ? 4 : selected - 1);
-  const handlePlus = () => setSelected(selected === 4 ? 1 : selected + 1);
+  const handleMinus = () => {
+    setSelected(selected === 1 ? 4 : selected - 1);
+    setAngle(angle - 90);
+  };
+
+  const handlePlus = () => {
+    setSelected(selected === 4 ? 1 : selected + 1);
+    setAngle(angle + 90);
+  };
 
   return (
-    <div className="flex w-full px-8 items-center">
+    <div className="flex px-8 mt-8 justify-center items-center">
       <KeyboardArrowLeft
         size={48}
         color="var(--darkGray)"
@@ -37,10 +44,7 @@ function PlatesOptions({ selected, setSelected, angle, setAngle } : Params) {
           type="button"
           className={`cardInfoContainer p-3 mr-10 pointer ${item.alt === selected && "selected"}`}
           key={item.alt}
-          onClick={() => {
-            setSelected(item.alt);
-            setAngle(angle + 90);
-          }}
+
         >
           <Image
             src={item.src}
@@ -48,7 +52,7 @@ function PlatesOptions({ selected, setSelected, angle, setAngle } : Params) {
             width="80"
             height="80"
           />
-          <p className="font-bold text-center text-xs mt-2">{item.text}</p>
+          <p className="font-bold text-center text-xs mt-2 colorDarkGray">{item.text}</p>
         </button>
       ))}
       <KeyboardArrowRight
