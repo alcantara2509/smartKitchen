@@ -10,12 +10,12 @@ const data = [
     text: "Dolor sit Amet",
   },
   {
-    src: "/images/plating3.png",
+    src: "/images/plating4.png",
     alt: 3,
     text: "Amet commodi",
   },
   {
-    src: "/images/plating4.png",
+    src: "/images/plating3.png",
     alt: 4,
     text: "Ipsum dolor",
   },
